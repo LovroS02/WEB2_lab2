@@ -11,6 +11,14 @@ document.getElementById("checkbox").onchange = () => {
     }
 }
 
+document.getElementById("username").onchange = () => {
+    grecaptcha.reset();
+}
+
+document.getElementById("password").onchange = () => {
+    grecaptcha.reset();
+}
+
 form.onsubmit = async (event) => {
     event.preventDefault();
 
