@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>SQL injection example</h1>
+
+    <input type="checkbox" id="checkbox">
+    <label for="checkbox" id="checkbox-text">Ranjivost isključena</label>
+    <br><br>
+
+    <div>
+      <label for="username">Username:</label>
+      <br>
+      <input type="text" name="username" id="username"/>
+      <br>
+      <label for="password">Password:</label>
+      <br>
+      <input type="password" name="password" id="password" Ï/>
+      <br><br>
+      <button id="submit">Submit</button>
+    </div>
+
+    <br><br>
+
+    <p id="sql"></p>
+
+    <div id="users"></div>
+
+    <script type="module" src="/js/sql_injection.js"></script>
+  </body>
+</html>
