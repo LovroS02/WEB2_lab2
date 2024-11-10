@@ -61,7 +61,7 @@ app.post("/broken-authentication", async (req, res) => {
     const { username, password, enabled, captchaResponse } = req.body;
 
     let response;
-    if (enabled) {
+    if (!enabled) {
         response = await fetch("https://www.google.com/recaptcha/api/siteverify",
             {
                 method: "POST",

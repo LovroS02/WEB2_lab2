@@ -2,11 +2,11 @@ const form = document.getElementById("form");
 
 document.getElementById("checkbox").onchange = () => {
     if (document.getElementById("checkbox").checked) {
-        document.getElementById("captcha").style.display = "inline";
+        document.getElementById("captcha").style.display = "none";
         document.getElementById("checkbox-text").innerHTML = "Ranjivost uključena";
     }
     else {
-        document.getElementById("captcha").style.display = "none";
+        document.getElementById("captcha").style.display = "inline";
         document.getElementById("checkbox-text").innerHTML = "Ranjivost isključena";
     }
 }
@@ -19,7 +19,7 @@ form.onsubmit = async (event) => {
     const enabled = document.getElementById("checkbox").checked;
     const captchaResponse = grecaptcha.getResponse();
 
-    if (!captchaResponse && enabled) {
+    if (!captchaResponse && !enabled) {
         document.getElementById("message").innerHTML = "Potvrdi da nisi robot";
         
         throw new Error("Captcha nije odobrena");
