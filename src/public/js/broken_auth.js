@@ -19,7 +19,7 @@ form.onsubmit = async (event) => {
     const enabled = document.getElementById("checkbox").checked;
     const captchaResponse = grecaptcha.getResponse();
 
-    if (!captchaResponse) {
+    if (!captchaResponse && enabled) {
         document.getElementById("message").innerHTML = "Potvrdi da nisi robot";
         
         throw new Error("Captcha nije odobrena");
