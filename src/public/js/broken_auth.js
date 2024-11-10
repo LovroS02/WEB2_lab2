@@ -25,7 +25,7 @@ form.onsubmit = async (event) => {
         throw new Error("Captcha nije odobrena");
     }
 
-    const response = await fetch("http://localhost:8000/broken-authentication",
+    const response = await fetch("https://web2-lab2-backend-5mzf.onrender.com/broken-authentication",
         {
             method: "POST",
             headers: {

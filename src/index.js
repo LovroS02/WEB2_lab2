@@ -6,7 +6,7 @@ const app = express();
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.listen(3000, () => {
-    console.log(`Listening on 3000`);
+    console.log(`Listening on https://web2-lab2-frontend-bjt2.onrender.com`);
 });
 
 app.get('/', (req, res) => {

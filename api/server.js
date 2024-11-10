@@ -16,12 +16,15 @@ const pool = new Pool({
     ssl: true
 });
 
-app.use(cors());
+app.use(cors({
+    origin: "https://web2-lab2-frontend-bjt2.onrender.com",
+    optionsSuccessStatus: 200
+}));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.listen(8000, () => {
-    console.log(`Listening on 8000`);
+    console.log(`Listening on https://web2-lab2-backend-5mzf.onrender.com`);
 })
 
 app.post("/sql-injection", async (req, res) => {

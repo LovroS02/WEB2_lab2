@@ -12,7 +12,7 @@ document.getElementById("submit").onclick = async () => {
     const password = document.getElementById("password").value;
     const enabled = document.getElementById("checkbox").checked;
 
-    const response = await fetch("http://localhost:8000/sql-injection",
+    const response = await fetch("https://web2-lab2-backend-5mzf.onrender.com/sql-injection",
         {
             method: "POST",
             headers: {
